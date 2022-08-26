@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.androidspace.fusion.ui.common.camera.PhotoViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.common.camera.CameraFragment">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/ivTakePhotol"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <!--                 app:implementationMode="compatible"
+                app:scaleType="fitCenter" -->
+            <androidx.camera.view.PreviewView
+                android:id="@+id/pvCamera"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCameraSwitch"
+            android:layout_width="@dimen/large"
+            android:layout_height="@dimen/large"
+            android:layout_marginLeft="@dimen/xlbig"
+            android:layout_marginBottom="@dimen/xbig"
+            android:onClick="@{model::onSelectCamera}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:srcCompat="@drawable/switch_camera" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivTakePhotol"
+            android:layout_width="@dimen/xxxlarge"
+            android:layout_height="@dimen/xxxlarge"
+            android:layout_marginBottom="@dimen/xbig"
+            android:onClick="@{model::takePhoto}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:srcCompat="@drawable/take_photo" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivFlash"
+            android:layout_width="@dimen/large"
+            android:layout_height="@dimen/large"
+            android:layout_marginRight="@dimen/xlbig"
+            android:layout_marginBottom="@dimen/xbig"
+            android:onClick="@{model::onFlashSwitch}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:srcCompat="@drawable/flash_auto" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

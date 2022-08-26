@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:elevation="@dimen/small"
+        app:cardBackgroundColor="@color/black"
+        android:layout_width="@dimen/xxxxlarge"
+        android:layout_height="@dimen/xxxxlarge">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:elevation="@dimen/small"
+            android:padding="@dimen/tiny"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPhoto"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivTop"
+                android:padding="@dimen/xmedium"
+                app:srcCompat="@drawable/ic_play"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:paddingLeft="@dimen/tiny"
+                android:paddingRight="@dimen/tiny"
+                android:paddingTop="@dimen/ltiny"
+                android:paddingBottom="@dimen/ltiny"
+                android:id="@+id/tvTiming"
+                android:background="@color/black"
+                android:textAppearance="@style/TinyButtonTextStyle"
+                android:textColor="@color/white"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llSelected"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:background="@drawable/circle_step_prev"
+                android:layout_marginRight="@dimen/xsmall"
+                android:layout_marginBottom="@dimen/small"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="@dimen/xmedium"
+                android:layout_height="@dimen/xmedium">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    app:srcCompat="@drawable/ic_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <ProgressBar
+                android:id="@+id/prBar"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateTint="@android:color/white"
+                android:layout_centerHorizontal="true"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

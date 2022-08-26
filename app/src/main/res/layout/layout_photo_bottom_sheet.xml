@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/xmedium"
+        android:layout_marginTop="@dimen/small"
+        android:layout_marginBottom="@dimen/small"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTakePhoto"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xbig"
+            android:layout_marginStart="@dimen/medium"
+            android:layout_marginEnd="@dimen/medium"
+            android:backgroundTint="@android:color/white"
+            android:drawablePadding="@dimen/big"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/choose_photo_post"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCamera"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xbig"
+            android:layout_marginStart="@dimen/medium"
+            android:layout_marginEnd="@dimen/medium"
+            android:backgroundTint="@android:color/white"
+            android:drawablePadding="@dimen/big"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/choose_photo_take"
+            android:textColor="@color/blue"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvVideo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xbig"
+            android:layout_marginStart="@dimen/medium"
+            android:layout_marginEnd="@dimen/medium"
+            android:backgroundTint="@android:color/white"
+            android:drawablePadding="@dimen/big"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/choose_video_take"
+            android:textColor="@color/blue"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvGallery"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="@dimen/medium"
+            android:layout_marginEnd="@dimen/medium"
+            android:backgroundTint="@android:color/white"
+            android:drawablePadding="@dimen/big"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/choose_photo_gallery"
+            android:textColor="@color/blue"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/xbig"
+            android:layout_marginStart="@dimen/medium"
+            android:layout_marginEnd="@dimen/medium"
+            android:backgroundTint="@android:color/white"
+            android:drawablePadding="@dimen/big"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/cancel_media"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/small"
+            android:layout_marginBottom="@dimen/xmedium" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

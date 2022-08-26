@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="error_color">#FA5D7F</color>
+    <color name="blueDark">#28418D</color>
+    <color name="tran_dark_background">#7A191D23</color>
+
+    <string name="bitmap_resize_error">Помилка зміни розміру</string>
+    <string name="gallery">Галерея</string>
+    <string name="camera">Камера</string>
+    <string name="need_camera">Надайте додатку доступ до камери, тоді зможите робити фото та знімати відео</string>
+    <string name="choose_photo_post">Вибрати фото</string>
+    <string name="choose_photo_take">Зняти відео</string>
+    <string name="choose_video_take">Зняти відео</string>
+    <string name="choose_photo_gallery">З галереї</string>
+
+    <string name="uhd" translatable="false">Ultra High Definition, 2160p</string>
+    <string name="fhd" translatable="false">Full High Definition, 1080p</string>
+    <string name="hd" translatable="false">High Definition, 720p</string>
+    <string name="sd" translatable="false">Standart Definition, 480p</string>
+    <string name="show_photo">Перегляд фото</string>
+    <string name="show_video">Перегляд відео</string>
+    <string name="add_media_files">Додати медіафайли</string>
+    <string name="add_media">Додати</string>
+    <string name="cancel_media">Відмінити</string>
+
+    <style name="ButtonTextStyle">
+        <item name="android:fontFamily">@font/inter_normal</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:lineHeight" tools:targetApi="28">26sp</item>
+        <item name="android:textFontWeight" tools:targetApi="28">600</item>
+    </style>
+    <style name="ButtonLightTextStyle">
+        <item name="android:fontFamily">@font/inter_normal</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:lineHeight" tools:targetApi="28">22sp</item>
+        <item name="android:textFontWeight" tools:targetApi="28">400</item>
+    </style>
+    <style name="TinyButtonTextStyle">
+        <item name="android:fontFamily">@font/inter_normal</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:lineHeight" tools:targetApi="28">12sp</item>
+        <item name="android:textFontWeight" tools:targetApi="28">500</item>
+    </style>
+</resources>

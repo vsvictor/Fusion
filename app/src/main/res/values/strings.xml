@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Fusion</string>
+    <string name="title_navigation">Навігація</string>
+    <string name="title_roads">Маршрути</string>
+    <string name="title_profile">Профіль</string>
+
+    <string name="unknown_user">Користувач невідомий</string>
+    <string name="login_profile">Увійдіть, щоб отримати доступ до повного функціоналу</string>
+    <string name="offline_map_text">Офлайн мапи</string>
+    <string name="base_map_text">Базові мапи</string>
+    <string name="invite_text">Оцінити застосунок</string>
+    <string name="friends_text">Розповісти друзям</string>
+    <string name="change_language">Змінити мову</string>
+    <string name="login">Увійти</string>
+    <string name="exit">Вийти</string>
+    <string name="search">Пошук</string>
+    <string name="create">Створити</string>
+    <string name="add_map">Додати мапу</string>
+    <string name="map_name">Назва мапи</string>
+    <string name="cancel">Скасувати</string>
+
+    <string name="title_offline_region">Області</string>
+    <string name="title_offline_district">Райони</string>
+    <string name="title_offline_custom">Користувацькі</string>
+</resources>

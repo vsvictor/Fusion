@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="model"
+            type="com.infotech.mines.ui.common.license.PDFViewModel" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="@color/gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.common.license.PDFFragment">
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/polView"
+        android:layout_margin="@dimen/small"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

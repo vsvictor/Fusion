@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="model"
+            type="com.androidspace.fusion.ui.common.camera.CropViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/cardview_dark_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.common.camera.CropFragment">
+
+        <com.isseiaoki.simplecropview.CropImageView
+            android:id="@+id/cropImageView"
+            custom:scv_initial_frame_scale="0.8"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="-96dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            custom:scv_crop_mode="square"
+            custom:scv_background_color="@color/cardview_dark_background"
+            custom:scv_handle_color="@color/white"
+            custom:scv_guide_color="@color/error_color"
+            custom:scv_frame_color="@color/white"
+            custom:scv_handle_size="@dimen/small"
+            custom:scv_touch_padding="@dimen/small"
+            custom:scv_handle_show_mode="show_always"
+            custom:scv_guide_show_mode="not_show"
+            custom:scv_min_frame_size="200dp"
+            custom:scv_frame_stroke_weight="0dp"
+            custom:scv_guide_stroke_weight="0dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:backgroundTint="@color/blueDark"
+            android:layout_marginRight="@dimen/xmedium"
+            android:layout_marginBottom="@dimen/xmedium"
+            app:srcCompat="@drawable/ic_crop"
+            app:fabSize="normal"
+            app:maxImageSize="@dimen/medium"
+            app:tint="@color/white"
+            custom:layout_constraintBottom_toBottomOf="parent"
+            custom:layout_constraintRight_toRightOf="parent"
+            android:onClick="@{model::onCrop}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

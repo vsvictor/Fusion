@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/offline_map"
+    app:startDestination="@id/regionOfflineMapFragment">
+
+    <fragment
+        android:id="@+id/regionOfflineMapFragment"
+        android:name="com.androidspace.fusion.ui.profile.offline.RegionOfflineMapFragment"
+        android:label="RegionOfflineMapFragment" />
+    <fragment
+        android:id="@+id/districtOfflineMapFragment"
+        android:name="com.androidspace.fusion.ui.profile.offline.DistrictOfflineMapFragment"
+        android:label="DistrictOfflineMapFragment" />
+    <fragment
+        android:id="@+id/customOfflineMapFragment"
+        android:name="com.androidspace.fusion.ui.profile.offline.CustomOfflineMapFragment"
+        android:label="CustomOfflineMapFragment" />
+<!--    <fragment
+        android:id="@+id/offlineMapListFragment"
+        android:name="com.infotech.mines.ui.profile.local.OfflineMapListFragment"
+        android:label="OfflineMapListFragment" />-->
+
+
+</navigation>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/regionOfflineMapFragment"
+        android:icon="@drawable/ic_offline_region"
+        android:title="@string/title_offline_region" />
+
+    <item
+        android:id="@+id/districtOfflineMapFragment"
+        android:icon="@drawable/ic_offline_district"
+        android:title="@string/title_offline_district" />
+
+    <item
+        android:id="@+id/customOfflineMapFragment"
+        android:icon="@drawable/ic_offline_custom"
+        android:title="@string/title_offline_custom" />
+</menu>

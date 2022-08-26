@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="oauth_redirect_host">auth</string>
+    <string name="oauth_redirect_uri">authenticate-with-oauth</string>
+</resources>

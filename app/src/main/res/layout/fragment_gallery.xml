@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.androidspace.fusion.ui.common.camera.GalleryViewModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        tools:context=".ui.map.FindAddressFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clRoot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clAction"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/xxxlarge"
+                android:background="@color/light_black"
+                android:paddingLeft="@dimen/medium"
+                android:paddingRight="@dimen/medium"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/tiny"
+                    android:onClick="@{model::onBack}"
+                    app:layout_constraintBottom_toBottomOf="@id/tvContacts"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvContacts"
+                    app:srcCompat="@drawable/ic_arrow_back_white" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvContacts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/medium"
+                    android:layout_marginBottom="@dimen/medium"
+                    android:text="@string/add_media_files"
+                    android:textAppearance="@style/ActionBarTextStyle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/ivBack" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                app:layout_constraintTop_toBottomOf="@id/clAction"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/black"
+                android:paddingLeft="@dimen/small"
+                android:paddingTop="@dimen/small"
+                android:paddingRight="@dimen/small"
+                tools:context=".ui.common.camera.GalleryFragment">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:images="@{model.imageList.images}"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    android:layout_marginBottom="@dimen/xmedium"
+                    app:layout_constraintBottom_toTopOf="@id/clBottom"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:spanCount="3" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clBottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/big_button_height"
+                    android:layout_marginLeft="@dimen/medium"
+                    android:layout_marginRight="@dimen/medium"
+                    android:layout_marginBottom="@dimen/big_button_down"
+                    android:onClick="@{model::onAdd}"
+                    android:background="@drawable/big_button_profile"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvNext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add_media"
+                        android:textAppearance="@style/ButtonNormalTextStyle"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ProgressBar
+                android:id="@+id/prBar"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateTint="@android:color/white"
+                android:layout_centerHorizontal="true"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llCamera"
+                android:background="@color/black"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</layout>
