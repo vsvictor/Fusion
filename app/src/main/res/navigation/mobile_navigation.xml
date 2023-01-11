@@ -11,36 +11,12 @@
         android:label="@string/title_navigation"
         tools:layout="@layout/fragment_navigation" />
 
-    <fragment
-        android:id="@+id/navigation_roads"
-        android:name="com.androidspace.fusion.ui.route.RouteFragment"
-        android:label="@string/title_roads"
-        tools:layout="@layout/fragment_route" />
 
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.androidspace.fusion.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
-    <fragment
-        android:id="@+id/regionListFragment"
-        android:name="com.androidspace.fusion.ui.profile.RegionListFragment"
-        android:label="RegionListFragment" />
-    <fragment
-        android:id="@+id/regionMapFragment"
-        android:name="com.androidspace.fusion.ui.profile.RegionMapFragment"
-        android:label="RegionMapFragment" />
-    <fragment
-        android:id="@+id/basemapFragment"
-        android:name="com.androidspace.fusion.ui.profile.BasemapFragment"
-        android:label="BasemapFragment" />
-    <fragment
-        android:id="@+id/offlineMaps"
-        android:name="com.androidspace.fusion.ui.profile.offline.OfflineMapFragment"
-        android:label="OfflineMapsFragment" />
-    <fragment
-        android:id="@+id/offlineMapListFragment"
-        android:name="com.infotech.mines.ui.profile.local.OfflineMapListFragment"
-        android:label="OfflineMapListFragment" />
+
 
 </navigation>

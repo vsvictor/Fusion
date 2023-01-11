@@ -3,6 +3,7 @@
     <string name="title_navigation">Навігація</string>
     <string name="title_roads">Маршрути</string>
     <string name="title_profile">Профіль</string>
+    <string name="title_tile_map">Tiles</string>
 
     <string name="unknown_user">Користувач невідомий</string>
     <string name="login_profile">Увійдіть, щоб отримати доступ до повного функціоналу</string>

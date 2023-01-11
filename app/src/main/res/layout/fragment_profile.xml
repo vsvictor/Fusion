@@ -271,7 +271,6 @@
                         android:layout_height="wrap_content">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
-                            android:onClick="@{model::onOfflineMapsList}"
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/large">
 
@@ -314,7 +313,6 @@
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                         <androidx.constraintlayout.widget.ConstraintLayout
-                            android:onClick="@{model::onBasemap}"
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/large">
 

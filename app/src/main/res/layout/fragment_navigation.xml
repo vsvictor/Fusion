@@ -13,11 +13,11 @@
     android:layout_height="match_parent"
     tools:context=".ui.navigation.NavigationFragment">
 
-    <TextView
+    <com.esri.arcgisruntime.mapping.view.MapView
+        android:id="@+id/mapView"
+        android:layout_marginBottom="-25dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textColor="@color/white"
-        android:text="@string/title_navigation" />
+        android:layout_height="match_parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -14,9 +14,11 @@ class Constants {
         const val ANONIMUS = "anonimous@anon.com"
         const val ANONPASS = "anonimous"
 
-        val portal = Portal(BuildConfig.PORTAL_URL, false)
-        val basemap = PortalItem(portal, "01c27c8d5f6e4570a361fb8e761e0729")
-        val light = PortalItem(portal,"eee73ee6c03a45888c50275c29ab816c")
-        val regions = PortalItem(portal, "c17ab2ed296247149e1ded5cc6a6fd4a")
+        val portal = Portal(BuildConfig.PORTAL_URL, true).apply {
+            //credential = UserCredential("viktor.dzhurliak", "Vestern74")
+        }
+        val basemap = PortalItem(portal, "22cc4cff89ea44d781f6a7d93045f5f8")
+        val regions = PortalItem(portal, "5e77557034b244db9d5bea56f4bbcdc4")
+        var ukraine = PortalItem(portal, "a01b0b0a504f480aa7cb11a12a1cb38f")
     }
 }
