@@ -6,12 +6,6 @@ plugins {
 
 android {
     compileSdk 33
-    lintOptions {
-        abortOnError false
-        absolutePaths false
-        lintConfig file('lint.xml')
-        baseline file('lint-baseline.xml')
-    }
     defaultConfig {
         applicationId "com.androidspace.fusion"
         minSdk 26
@@ -69,6 +63,13 @@ android {
     kapt{
         correctErrorTypes true
     }
+    lint {
+        abortOnError false
+        absolutePaths false
+        baseline file('lint-baseline.xml')
+        lintConfig file('lint.xml')
+    }
+    namespace 'com.androidspace.fusion'
 }
 
 dependencies {
