@@ -10,8 +10,8 @@ import com.androidspace.fusion.ui.splash.SplashViewModel
 @Layout(R.layout.fragment_splash)
 class SplashFragment : BaseFragment<FragmentSplashBinding, SplashViewModel>() {
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onInit() {
+        super.onInit()
         binding.lifecycleOwner = requireActivity()
         binding.model = viewModel
         arguments?.let {

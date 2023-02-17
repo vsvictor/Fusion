@@ -21,10 +21,6 @@ import com.androidspace.fusion.data.local.SettingsSharedPreferences
 import com.androidspace.fusion.databinding.ActivityMainBinding
 import com.androidspace.fusion.ui.common.OnBottomBarVisible
 import com.androidspace.fusion.utils.transparentStatusBar
-import com.esri.arcgisruntime.ArcGISRuntimeEnvironment
-import com.esri.arcgisruntime.location.LocationDataSource
-import com.esri.arcgisruntime.security.AuthenticationManager
-import com.esri.arcgisruntime.security.OAuthConfiguration
 import org.koin.java.KoinJavaComponent
 
 @Layout(R.layout.activity_main)
@@ -35,9 +31,9 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainActViewModel>(), OnBo
     private var currentID = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        ArcGISRuntimeEnvironment.setLicense(getString(R.string.arcgis_license))
-        ArcGISRuntimeEnvironment.setApiKey(getString(R.string.map_key))
-        AuthenticationManager.setTrustAllSigners(true)
+        //ArcGISRuntimeEnvironment.setLicense(getString(R.string.arcgis_license))
+        //ArcGISRuntimeEnvironment.setApiKey(getString(R.string.api))
+        //AuthenticationManager.setTrustAllSigners(true)
 
 
         transparentStatusBar()

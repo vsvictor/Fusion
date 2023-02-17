@@ -95,44 +95,23 @@ class PhotoFragment : BaseFragment<FragmentPhotoBinding, PhotoViewModel>(), OnFr
         } ?: Unit
     }
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        //onNavigateView = context as OnNavigateView
-    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mainExecutor = ContextCompat.getMainExecutor(requireContext())
-        //cameraExecutor = Executors.newSingleThreadExecutor()
-        //thread.start()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //requireActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         onActionBarState?.onActionBarView(true)
-
         requireActivity().setTitle(R.string.camera)
-        //onNavigateView?.onBottomBarVisible(false)
-
         screenWidth = Resources.getSystem().displayMetrics.widthPixels
         screenHeight = Resources.getSystem().displayMetrics.heightPixels
-        //val d = displayManager.displays
         Log.d(TAG, "Size:"+screenWidth+"x"+screenHeight)
-        //handler = Handler(thread.looper)
-
-        //val sensorManager = requireContext().getSystemService(Context.SENSOR_SERVICE) as SensorManager
-        //val light = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT)
         displayManager.registerDisplayListener(displayListener, null)
         viewFinder = binding.pvCamera
-/*        viewFinder.previewStreamState.observe(viewLifecycleOwner, Observer {
-            when(it){
-                PreviewView.StreamState.IDLE -> {}
-                PreviewView.StreamState.STREAMING -> {}
-            }
-        })*/
     }
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onInit() {
+        super.onInit()
         binding.model = viewModel
         viewModel.setOnDestinatationListener(dest)
         viewModel.args = arguments
@@ -144,17 +123,10 @@ class PhotoFragment : BaseFragment<FragmentPhotoBinding, PhotoViewModel>(), OnFr
         initPhoto()
         initFlash()
     }
-
-/*    override fun onConfigurationChanged(newConfig: Configuration) {
-        super.onConfigurationChanged(newConfig)
-        bindCameraUseCases()
-    }*/
-
     override fun onResume() {
         super.onResume()
         initCamera()
     }
-
     private fun initCamera(){
         viewFinder.post{
             displayId = viewFinder.display.displayId
@@ -195,13 +167,7 @@ class PhotoFragment : BaseFragment<FragmentPhotoBinding, PhotoViewModel>(), OnFr
     }
     override fun onDestroyView() {
         super.onDestroyView()
-        //onNavigateView?.onBottomBarVisible(false)
         stopCamera()
-    }
-
-    override fun onDetach() {
-        super.onDetach()
-        //onNavigateView = null
     }
 
     @NeedsPermission(android.Manifest.permission.CAMERA, android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
@@ -214,7 +180,6 @@ class PhotoFragment : BaseFragment<FragmentPhotoBinding, PhotoViewModel>(), OnFr
                 hasFrontCamera() -> CameraSelector.LENS_FACING_FRONT
                 else -> throw IllegalStateException("Back and front camera are unavailable")
             }
-            //lensFacing = CameraSelector.LENS_FACING_FRONT
             try {
                 bindCameraUseCases()
             }catch (ex: IllegalStateException){
@@ -236,21 +201,13 @@ class PhotoFragment : BaseFragment<FragmentPhotoBinding, PhotoViewModel>(), OnFr
             viewFinder.display.getRealMetrics(it)
 
         }
-        //val metrics = Resources.getSystem().displayMetrics
-
         Log.d(TAG, "Screen metrics: ${metrics.widthPixels} x ${metrics.heightPixels}")
-
         val screenAspectRatio = aspectRatio(metrics.widthPixels, metrics.heightPixels)
         Log.d(TAG, "Preview aspect ratio: $screenAspectRatio")
-
         var rotation = viewFinder.display.rotation
-
         Log.d(TAG, "Rotation changed on bind: ${viewFinder.display.rotation}")
-
-        //val cameraProvider = cameraProvider ?: throw IllegalStateException("Camera initialization failed.")
         cameraProvider?.let {
             cameraSelector = CameraSelector.Builder().requireLensFacing(lensFacing).build()
-
             val sessionBuilder = SessionConfig.Builder()
             sessionBuilder.addDeviceStateCallback(deviceStateCallback)
             sessionBuilder.build()
@@ -268,9 +225,6 @@ class PhotoFragment : BaseFragment<FragmentPhotoBinding, PhotoViewModel>(), OnFr
                 .setDefaultSessionConfig(sessionConfig)
             preview = previewBuilder.build().apply {
                 this.setSurfaceProvider(viewFinder.surfaceProvider)
-                //this.targetRotation = Surface.ROTATION_0
-                //it.setViewPortCropRect(Rect(0,0,screenHeight, screenWidth))
-                //it.updateSuggestedResolution(Size(800, 600))
             }
 
             val builder = ImageCapture.Builder()
@@ -285,8 +239,6 @@ class PhotoFragment : BaseFragment<FragmentPhotoBinding, PhotoViewModel>(), OnFr
             try {
                 camera = it.bindToLifecycle(this, cameraSelector!!, preview, imageCapture)
                 val i = 0
-                //viewFinder.implementationMode = PreviewView.ImplementationMode.COMPATIBLE
-                //imagePreview?.setSurfaceProvider(binding.previewView.surfaceProvider)
             } catch (exc: Exception) {
                 Log.e(TAG, "Use case binding failed", exc)
             }
@@ -300,11 +252,6 @@ class PhotoFragment : BaseFragment<FragmentPhotoBinding, PhotoViewModel>(), OnFr
             @SuppressLint("UnsafeExperimentalUsageError")
             override fun onCaptureSuccess(imageProxy: ImageProxy) {
                 Log.d(TAG, "Success captured")
-/*
-                val degree = imageProxy.imageInfo.rotationDegrees
-                val bitmap = Bitmap.createBitmap(imageProxy.width, imageProxy.height, Bitmap.Config.ARGB_8888)
-                MediaStore.Images.Media.insertImage(requireContext().getContentResolver(), bitmap, "Deminding" , "");
-*/
                 viewModel.convert(imageProxy)
                 super.onCaptureSuccess(imageProxy)
             }
@@ -317,11 +264,9 @@ class PhotoFragment : BaseFragment<FragmentPhotoBinding, PhotoViewModel>(), OnFr
                 }
             }
         }
-        //imageCapture?.takePicture(cameraExecutor, detect)
         imageCapture?.takePicture(Executors.newSingleThreadExecutor(), detect)
     }
     private fun stopCamera() {
-        //cameraExecutor.shutdown()
         displayManager.unregisterDisplayListener(displayListener)
         cameraProvider?.unbindAll()
         Log.d(TAG, "Camera stopped")
@@ -332,6 +277,7 @@ class PhotoFragment : BaseFragment<FragmentPhotoBinding, PhotoViewModel>(), OnFr
     private fun hasFrontCamera(): Boolean {
         return cameraProvider?.hasCamera(CameraSelector.DEFAULT_FRONT_CAMERA) ?: false
     }
+    @Deprecated("Deprecated in Java")
     @SuppressLint("NeedOnRequestPermissionsResult")
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
@@ -359,9 +305,6 @@ class PhotoFragment : BaseFragment<FragmentPhotoBinding, PhotoViewModel>(), OnFr
     }
 
     override fun onFragmentOpen(fragment: Fragment?) {
-        fragment?.let {
-            //requireActivity().supportFragmentManager.beginTransaction().add(R.id.llCamera, it).commit()
-        }
     }
     override fun onFragmentClose(fragment: Fragment?) {
         fragment?.let {

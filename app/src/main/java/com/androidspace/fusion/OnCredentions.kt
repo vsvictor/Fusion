@@ -1,6 +1,7 @@
 package com.androidspace.fusion.ui
 
-import com.esri.arcgisruntime.portal.Portal
+import com.arcgismaps.portal.Portal
+
 
 interface OnCredentions {
     val portal: Portal?

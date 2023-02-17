@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-feature
@@ -36,7 +37,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
+<!--        <activity
             android:exported="true"
             android:name="com.esri.arcgisruntime.security.DefaultOAuthIntentReceiver"
             android:launchMode="singleTask">
@@ -50,7 +51,7 @@
                     android:host="@string/oauth_redirect_host"
                     android:scheme="authenticate-with-oauth" />
             </intent-filter>
-        </activity>
+        </activity>-->
     </application>
 
 </manifest>

@@ -31,8 +31,8 @@ class AlphaPhotoFragment : BaseFragment<FragmentAlphaPhotoBinding, ShowPhotoView
             requireActivity().onBackPressed()
         }
     }
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onInit() {
+        super.onInit()
         binding.model = viewModel
         arguments?.let {
             viewModel.backID = it.getInt("back", -1)
@@ -40,21 +40,10 @@ class AlphaPhotoFragment : BaseFragment<FragmentAlphaPhotoBinding, ShowPhotoView
             url?.let {
                 if(!it.isEmpty()){
                     binding.prBar.isVisible = true
-/*                    Picasso.get().load(it).into(object: Target{
-                        override fun onBitmapLoaded(bitmap: Bitmap?, from: Picasso.LoadedFrom?) {
-                            bitmap?.let {
-                                binding.prBar.isVisible = false
-                                binding.ivPhoto.setImageBitmap(it)
-                            }
-                        }
-                        override fun onBitmapFailed(e: Exception?, errorDrawable: Drawable?) {}
-                        override fun onPrepareLoad(placeHolderDrawable: Drawable?) {}
-                    })*/
                     Glide.with(requireContext()).load(it).listener(object: RequestListener<Drawable>{
                         override fun onLoadFailed(e: GlideException?, model: Any?, target: com.bumptech.glide.request.target.Target<Drawable>?, isFirstResource: Boolean): Boolean {
                             return true
                         }
-
                         override fun onResourceReady(resource: Drawable?, model: Any?, target: com.bumptech.glide.request.target.Target<Drawable>?, dataSource: DataSource?, isFirstResource: Boolean): Boolean {
                             binding.prBar.isVisible = false
                             binding.ivPhoto.setImageDrawable(resource)

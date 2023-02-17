@@ -20,8 +20,8 @@ class PDFFragment : BaseFragment<FragmentPdfBinding, PDFViewModel>() {
         super.onViewCreated(view, savedInstanceState)
         binding.polView.setBackgroundColor(Color.LTGRAY);
     }
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onInit() {
+        super.onInit()
         binding.model = viewModel
         val policy = ThreadPolicy.Builder().permitAll().build()
         StrictMode.setThreadPolicy(policy)

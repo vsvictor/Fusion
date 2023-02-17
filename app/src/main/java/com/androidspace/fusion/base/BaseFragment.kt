@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
@@ -22,8 +23,7 @@ import org.koin.androidx.viewmodel.compat.SharedViewModelCompat.sharedViewModel
 import java.lang.reflect.ParameterizedType
 
 
-open class BaseFragment<DB : ViewDataBinding, VM : BaseViewModel<*>> : Fragment(),
-    OnLoader, OnInitViewModel, OnKeyboardStateChanged, OnMessage {
+open class BaseFragment<DB : ViewDataBinding, VM : BaseViewModel<*>> : Fragment(), DefaultLifecycleObserver, OnLoader, OnInitViewModel, OnKeyboardStateChanged, OnMessage {
     private val TAG = BaseFragment::class.java.simpleName
     val vmClass = (javaClass.genericSuperclass as ParameterizedType?)!!.actualTypeArguments[1] as Class<VM>
     protected lateinit var binding: DB
@@ -45,14 +45,14 @@ open class BaseFragment<DB : ViewDataBinding, VM : BaseViewModel<*>> : Fragment(
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        onInit()
         binding.lifecycleOwner = viewLifecycleOwner
         try {
             onLoader = context as OnLoader
         }catch (ex: Exception){}
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    open fun onInit() {
         viewModel.onInitViewModel = this
         viewModel.onMessage = this
         viewModel.setOnLoaderListener(this)
@@ -69,23 +69,25 @@ open class BaseFragment<DB : ViewDataBinding, VM : BaseViewModel<*>> : Fragment(
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
+        activity?.lifecycle?.addObserver(this)
         onKeyboadVisibleChanged = context as OnKeyboadVisibleChanged
         onActionBarState = context as OnActionBarState
     }
-
+    override fun onDetach() {
+        onLoader = null
+        onKeyboadVisibleChanged = null
+        onActionBarState = null
+        show(false)
+        activity?.lifecycle?.removeObserver(this)
+        super.onDetach()
+    }
     override fun onDestroyView() {
         super.onDestroyView()
         viewModel.clear()
         onLoader = null
     }
 
-    override fun onDetach() {
-        super.onDetach()
-        //onLoader = null
-        onKeyboadVisibleChanged = null
-        onActionBarState = null
-        show(false)
-    }
+
     open fun onBackPressed() {
         viewModel.onBackPressed()
     }

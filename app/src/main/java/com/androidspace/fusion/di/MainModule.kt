@@ -78,7 +78,6 @@ val mainModule = module {
     viewModel {
         PDFViewModel(get())
     }
-
     fragment {
         NavigationFragment()
     }

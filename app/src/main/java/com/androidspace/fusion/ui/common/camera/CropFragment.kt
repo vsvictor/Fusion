@@ -18,8 +18,8 @@ class CropFragment : BaseFragment<FragmentCropBinding, CropViewModel>() {
         requireActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         onActionBarState?.onActionBarView(true)
     }
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onInit() {
+        super.onInit()
         binding.model = viewModel
         val back = arguments?.getInt("back")
         back?.let {

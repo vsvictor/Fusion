@@ -36,8 +36,8 @@ class WebFragment : BaseFragment<FragmentWebBinding, WebViewModel>(), OnLoadURL 
         param.bottomMargin = onBottomBarVisible?.navigationBarHeight()?:0
         binding.clMain.layoutParams = param
     }
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onInit() {
+        super.onInit()
         viewModel.onLoadURL = this
         binding.model = viewModel
         viewModel.loaded = false

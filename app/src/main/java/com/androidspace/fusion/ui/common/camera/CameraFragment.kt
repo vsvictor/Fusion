@@ -28,8 +28,8 @@ class CameraFragment : BaseFragment<FragmentCameraBinding, PhotoViewModel>() {
         param.bottomMargin = requireContext().navigationBarHeight
         binding.vpPage.layoutParams = param
     }
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onInit() {
+        super.onInit()
         val list = ArrayList<Fragment>()
         list.add(PhotoFragment())
         list.add(VideoFragment())

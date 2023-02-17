@@ -1,9 +1,7 @@
 package com.androidspace.fusion.ui.route.data
 
-import com.esri.arcgisruntime.data.TileCache
-import com.esri.arcgisruntime.data.VectorTileCache
-import com.esri.arcgisruntime.layers.FeatureLayer
-import com.esri.arcgisruntime.mapping.ArcGISMap
+import com.arcgismaps.mapping.ArcGISMap
+import com.arcgismaps.mapping.layers.FeatureLayer
 
 interface OnMap {
     fun onMapLoaded(map: ArcGISMap?, layer: FeatureLayer? = null)

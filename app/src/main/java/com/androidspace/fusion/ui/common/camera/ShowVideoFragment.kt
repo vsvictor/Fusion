@@ -18,15 +18,14 @@ class ShowVideoFragment : BaseFragment<FragmentShowVideoBinding, ShowVideoViewMo
         requireActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         onActionBarState?.onActionBarView(true)
     }
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onInit() {
+        super.onInit()
         binding.model = viewModel
         arguments?.let {
             viewModel.backID = it.getInt("back", -1)
             val url = it.getString("url")
             url?.let {
                 if(!it.isEmpty()){
-                    //Picasso.get().load(it).into(binding.ivPhoto)
                     showVideo(Uri.parse(it))
                 }
             }

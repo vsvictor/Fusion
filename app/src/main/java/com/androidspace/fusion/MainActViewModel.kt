@@ -3,11 +3,13 @@ package com.androidspace.fusion
 import android.app.Application
 import android.util.Log
 import com.androidspace.fusion.base.BaseViewModel
-import com.esri.arcgisruntime.portal.Portal
+import com.arcgismaps.portal.Portal
+
+//import com.esri.arcgisruntime.portal.Portal
 
 class MainActViewModel(override val app: Application): BaseViewModel<Any>(app) {
     private val TAG = MainActViewModel::class.java.simpleName
-    private var _portal: Portal? = null
+/*    private var _portal: Portal? = null
     var portal get() = _portal; set(value) {
         _portal = value
         _portal?.let {
@@ -20,5 +22,5 @@ class MainActViewModel(override val app: Application): BaseViewModel<Any>(app) {
             it.loadAsync()
         }
 
-    }
+    }*/
 }
