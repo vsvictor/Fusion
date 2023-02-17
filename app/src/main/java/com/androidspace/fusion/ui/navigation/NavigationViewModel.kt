@@ -5,4 +5,7 @@ import androidx.lifecycle.ViewModel
 import com.androidspace.fusion.base.BaseViewModel
 
 class NavigationViewModel(override val app: Application) : BaseViewModel<Object>(app) {
+    override fun onBackPressed() {
+        super.onBackPressed()
+    }
 }

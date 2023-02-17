@@ -27,8 +27,7 @@ class SourcePhotoDialog : BottomSheetDialogFragment() {
     private var dest: OnBitmapDestinatation? = null
 
     private lateinit var binding: LayoutPhotoBottomSheetBinding
-    @Nullable
-    override fun onCreateView(inflater: LayoutInflater,@Nullable container: ViewGroup?,@Nullable savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate<LayoutPhotoBottomSheetBinding>(inflater, R.layout.layout_photo_bottom_sheet, container, false)
 
         //val view = inflater.inflate(R.layout.layout_photo_bottom_sheet, container,false)

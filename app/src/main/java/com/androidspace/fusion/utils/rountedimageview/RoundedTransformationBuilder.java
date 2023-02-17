@@ -1,5 +1,5 @@
-package com.infotech.mines.utils.rountedimageview;
 
+package com.androidspace.fusion.utils.rountedimageview;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -7,8 +7,6 @@ import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.widget.ImageView;
 
-import com.androidspace.fusion.utils.rountedimageview.Corner;
-import com.androidspace.fusion.utils.rountedimageview.RoundedDrawable;
 import com.squareup.picasso.Transformation;
 import java.util.Arrays;
 
