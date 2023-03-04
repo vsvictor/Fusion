@@ -4,13 +4,17 @@
     <data>
         <variable
             name="model"
-            type="com.androidspace.fusion.ui.navigation.NavigationViewModel" />
+            type="com.androidspace.fusion.ui.maps.MapViewModel" />
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.navigation.NavigationFragment">
+    tools:context=".ui.maps.MapFragment">
 
+    <com.arcgismaps.mapping.view.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

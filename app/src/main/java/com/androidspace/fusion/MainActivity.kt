@@ -12,6 +12,7 @@ import android.view.MenuItem
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.navigation.ui.*
 import com.androidspace.fusion.base.BaseActivity
@@ -21,6 +22,13 @@ import com.androidspace.fusion.data.local.SettingsSharedPreferences
 import com.androidspace.fusion.databinding.ActivityMainBinding
 import com.androidspace.fusion.ui.common.OnBottomBarVisible
 import com.androidspace.fusion.utils.transparentStatusBar
+import com.arcgismaps.ApiKey
+import com.arcgismaps.ApiKeyResource
+import com.arcgismaps.ArcGISEnvironment
+import com.arcgismaps.License
+import com.arcgismaps.httpcore.authentication.AuthenticationManager
+import com.arcgismaps.portal.PortalUser
+import kotlinx.coroutines.launch
 import org.koin.java.KoinJavaComponent
 
 @Layout(R.layout.activity_main)
@@ -34,8 +42,34 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainActViewModel>(), OnBo
         //ArcGISRuntimeEnvironment.setLicense(getString(R.string.arcgis_license))
         //ArcGISRuntimeEnvironment.setApiKey(getString(R.string.api))
         //AuthenticationManager.setTrustAllSigners(true)
+        ArcGISEnvironment.apiKey = ApiKey.create(getString(R.string.api_key))
+        Log.d(TAG, "API KEY:"+ArcGISEnvironment.apiKey.toString())
+        //ArcGISEnvironment.setLicense(getString(R.string.license))
+        val lic = ArcGISEnvironment.license
+        Log.d(TAG, "============= License =============")
+        Log.d(TAG, "Permanent:"+lic.isPermanent)
+        Log.d(TAG, "Level:"+lic.licenseLevel.toString())
+        Log.d(TAG, "Status:"+lic.licenseStatus.toString())
+        Log.d(TAG, "Type:"+lic.licenseType.toString())
+        Log.d(TAG, "===================================")
 
-
+        lifecycleScope.launch {
+            Log.d(TAG, "============= Poral =============")
+            Log.d(TAG, "URL:"+Constants.portal.url)
+            Constants.portal.load().onSuccess {
+                Log.d(TAG, "Portal loaded")
+                Constants.portal.fetchFeaturedItems().onSuccess {
+                    for(item in it){
+                        Log.d(TAG, "Item:"+item.name)
+                    }
+                    Log.d(TAG, "=================================")
+                }.onFailure {
+                    Log.d(TAG, "=================================")
+                }
+            }.onFailure {
+                Log.d(TAG, "Portal load fail")
+            }
+        }
         transparentStatusBar()
         val tv = TypedValue()
         if (this.theme.resolveAttribute(android.R.attr.actionBarSize, tv, true)) {

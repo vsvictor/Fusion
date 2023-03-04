@@ -1,0 +1,2984 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="5" by="lint Electric Eel | 2022.1.1 Patch 1">
+
+    <issue
+        id="MissingPermission"
+        message="Missing permissions required by ConnectivityManager.getActiveNetwork: android.permission.ACCESS_NETWORK_STATE">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/NetworkHelper.kt"
+            line="15"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        message="Missing permissions required by ConnectivityManager.getNetworkCapabilities: android.permission.ACCESS_NETWORK_STATE">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/NetworkHelper.kt"
+            line="17"/>
+    </issue>
+
+    <issue
+        id="MissingPermission"
+        message="Missing permissions required by ConnectivityManager.getActiveNetworkInfo: android.permission.ACCESS_NETWORK_STATE">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/NetworkHelper.kt"
+            line="25"/>
+    </issue>
+
+    <issue
+        id="JcenterRepositoryObsolete"
+        message="JCenter Maven repository is no longer receiving updates: newer library versions may be available elsewhere">
+        <location
+            file="settings.gradle"/>
+    </issue>
+
+    <issue
+        id="JcenterRepositoryObsolete"
+        message="JCenter Maven repository is no longer receiving updates: newer library versions may be available elsewhere">
+        <location
+            file="settings.gradle"/>
+    </issue>
+
+    <issue
+        id="ScopedStorage"
+        message="WRITE_EXTERNAL_STORAGE no longer provides write access when targeting Android 11+, even when using `requestLegacyExternalStorage`">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="10"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background">
+        <location
+            file="src/main/java/com/androidspace/fusion/base/BaseActivity.kt"
+            line="167"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background">
+        <location
+            file="src/main/java/com/androidspace/fusion/base/BaseActivity.kt"
+            line="252"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background">
+        <location
+            file="src/main/java/com/androidspace/fusion/MainActivity.kt"
+            line="60"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background">
+        <location
+            file="src/main/java/com/androidspace/fusion/data/local/SettingsSharedPreferences.kt"
+            line="15"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background">
+        <location
+            file="src/main/java/com/androidspace/fusion/data/local/SettingsSharedPreferences.kt"
+            line="20"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background">
+        <location
+            file="src/main/java/com/androidspace/fusion/data/local/SettingsSharedPreferences.kt"
+            line="23"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background">
+        <location
+            file="src/main/java/com/androidspace/fusion/data/local/SettingsSharedPreferences.kt"
+            line="24"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background">
+        <location
+            file="src/main/java/com/androidspace/fusion/data/local/SettingsSharedPreferences.kt"
+            line="29"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background">
+        <location
+            file="src/main/java/com/androidspace/fusion/data/local/SettingsSharedPreferences.kt"
+            line="33"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background">
+        <location
+            file="src/main/java/com/androidspace/fusion/data/local/SettingsSharedPreferences.kt"
+            line="39"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background">
+        <location
+            file="src/main/java/com/androidspace/fusion/data/local/SettingsSharedPreferences.kt"
+            line="44"/>
+    </issue>
+
+    <issue
+        id="ApplySharedPref"
+        message="Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background">
+        <location
+            file="src/main/java/com/androidspace/fusion/data/local/SettingsSharedPreferences.kt"
+            line="53"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toUpperCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`.">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/Date.kt"
+            line="32"/>
+    </issue>
+
+    <issue
+        id="InternalInsetResource"
+        message="Using internal inset dimension resource `status_bar_height` is not supported">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/Context.kt"
+            line="21"/>
+    </issue>
+
+    <issue
+        id="KotlinNullnessAnnotation"
+        message="Do not use `@Nullable` in Kotlin; the nullability is already implied by the Kotlin type `View?` ending with `?`">
+        <location
+            file="src/main/java/com/androidspace/fusion/ui/common/camera/SourcePhotoDialog.kt"
+            line="30"/>
+    </issue>
+
+    <issue
+        id="KotlinNullnessAnnotation"
+        message="Do not use `@Nullable` in Kotlin; the nullability is already implied by the Kotlin type `Bundle?` ending with `?`">
+        <location
+            file="src/main/java/com/androidspace/fusion/ui/common/camera/SourcePhotoDialog.kt"
+            line="31"/>
+    </issue>
+
+    <issue
+        id="KotlinNullnessAnnotation"
+        message="Do not use `@Nullable` in Kotlin; the nullability is already implied by the Kotlin type `ViewGroup?` ending with `?`">
+        <location
+            file="src/main/java/com/androidspace/fusion/ui/common/camera/SourcePhotoDialog.kt"
+            line="31"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 29 (current min is 26): `android.os.Parcel#readBoolean`">
+        <location
+            file="src/main/java/com/androidspace/fusion/data/model/camera/ImageData.kt"
+            line="17"/>
+    </issue>
+
+    <issue
+        id="NewApi"
+        message="Call requires API level 29 (current min is 26): `android.os.Parcel#writeBoolean`">
+        <location
+            file="src/main/java/com/androidspace/fusion/data/model/camera/ImageData.kt"
+            line="29"/>
+    </issue>
+
+    <issue
+        id="SimpleDateFormat"
+        message="To get local formatting use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()`, or use `new SimpleDateFormat(String template, Locale locale)` with for example `Locale.US` for ASCII dates.">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/Date.kt"
+            line="27"/>
+    </issue>
+
+    <issue
+        id="SimpleDateFormat"
+        message="To get local formatting use `getDateInstance()`, `getDateTimeInstance()`, or `getTimeInstance()`, or use `new SimpleDateFormat(String template, Locale locale)` with for example `Locale.US` for ASCII dates.">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/String.kt"
+            line="39"/>
+    </issue>
+
+    <issue
+        id="SuspiciousIndentation"
+        message="The indentation string here is different from on the previous line (`&quot; &quot;` vs `\t`)">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/maskdit/MaskedEditText.java"
+            line="139"/>
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/maskdit/MaskedEditText.java"
+            line="135"/>
+    </issue>
+
+    <issue
+        id="SuspiciousIndentation"
+        message="The indentation string here is different from on the previous line (`&quot; &quot;` vs `\t`)">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/maskdit/MaskedEditText.java"
+            line="327"/>
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/maskdit/MaskedEditText.java"
+            line="321"/>
+    </issue>
+
+    <issue
+        id="SuspiciousIndentation"
+        message="The indentation string here is different from on the previous line (`&quot; &quot;` vs `\t`)">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/maskdit/MaskedEditText.java"
+            line="357"/>
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/maskdit/MaskedEditText.java"
+            line="354"/>
+    </issue>
+
+    <issue
+        id="SuspiciousIndentation"
+        message="The indentation string here is different from on the previous line (`&quot; &quot;` vs `\t`)">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/maskdit/MaskedEditText.java"
+            line="430"/>
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/maskdit/MaskedEditText.java"
+            line="422"/>
+    </issue>
+
+    <issue
+        id="SuspiciousIndentation"
+        message="The indentation string here is different from on the previous line (`&quot; &quot;` vs `\t`)">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/maskdit/MaskedEditText.java"
+            line="497"/>
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/maskdit/MaskedEditText.java"
+            line="485"/>
+    </issue>
+
+    <issue
+        id="AppBundleLocaleChanges"
+        message="Found dynamic locale changes, but did not find corresponding Play Core library calls for downloading languages and splitting by language is not disabled in the `bundle` configuration">
+        <location
+            file="src/main/java/com/androidspace/fusion/base/BaseActivity.kt"
+            line="62"/>
+    </issue>
+
+    <issue
+        id="FragmentTagUsage"
+        message="Replace the &lt;fragment> tag with FragmentContainerView.">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="25"/>
+    </issue>
+
+    <issue
+        id="NonConstantResourceId"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them as annotation attributes">
+        <location
+            file="src/main/java/com/androidspace/fusion/ui/common/camera/AlphaPhotoFragment.kt"
+            line="23"/>
+    </issue>
+
+    <issue
+        id="NonConstantResourceId"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them as annotation attributes">
+        <location
+            file="src/main/java/com/androidspace/fusion/ui/common/camera/AlphaVideoFragment.kt"
+            line="18"/>
+    </issue>
+
+    <issue
+        id="NonConstantResourceId"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them as annotation attributes">
+        <location
+            file="src/main/java/com/androidspace/fusion/ui/common/camera/CameraFragment.kt"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="NonConstantResourceId"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them as annotation attributes">
+        <location
+            file="src/main/java/com/androidspace/fusion/ui/common/camera/CropFragment.kt"
+            line="14"/>
+    </issue>
+
+    <issue
+        id="NonConstantResourceId"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them as annotation attributes">
+        <location
+            file="src/main/java/com/androidspace/fusion/ui/common/camera/GalleryFragment.kt"
+            line="21"/>
+    </issue>
+
+    <issue
+        id="NonConstantResourceId"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them as annotation attributes">
+        <location
+            file="src/main/java/com/androidspace/fusion/MainActivity.kt"
+            line="26"/>
+    </issue>
+
+    <issue
+        id="NonConstantResourceId"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them as annotation attributes">
+        <location
+            file="src/main/java/com/androidspace/fusion/ui/navigation/NavigationFragment.kt"
+            line="14"/>
+    </issue>
+
+    <issue
+        id="NonConstantResourceId"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them as annotation attributes">
+        <location
+            file="src/main/java/com/androidspace/fusion/ui/common/license/PDFFragment.kt"
+            line="17"/>
+    </issue>
+
+    <issue
+        id="NonConstantResourceId"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them as annotation attributes">
+        <location
+            file="src/main/java/com/androidspace/fusion/ui/common/camera/PhotoFragment.kt"
+            line="51"/>
+    </issue>
+
+    <issue
+        id="NonConstantResourceId"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them as annotation attributes">
+        <location
+            file="src/main/java/com/androidspace/fusion/ui/profile/ProfileFragment.kt"
+            line="17"/>
+    </issue>
+
+    <issue
+        id="NonConstantResourceId"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them as annotation attributes">
+        <location
+            file="src/main/java/com/androidspace/fusion/ui/common/camera/ShowPhotoFragment.kt"
+            line="12"/>
+    </issue>
+
+    <issue
+        id="NonConstantResourceId"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them as annotation attributes">
+        <location
+            file="src/main/java/com/androidspace/fusion/ui/common/camera/ShowVideoFragment.kt"
+            line="13"/>
+    </issue>
+
+    <issue
+        id="NonConstantResourceId"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them as annotation attributes">
+        <location
+            file="src/main/java/com/androidspace/fusion/ui/splash/SplashFragment.kt"
+            line="10"/>
+    </issue>
+
+    <issue
+        id="NonConstantResourceId"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them as annotation attributes">
+        <location
+            file="src/main/java/com/androidspace/fusion/ui/common/camera/VideoFragment.kt"
+            line="46"/>
+    </issue>
+
+    <issue
+        id="NonConstantResourceId"
+        message="Resource IDs will be non-final by default in Android Gradle Plugin version 8.0, avoid using them as annotation attributes">
+        <location
+            file="src/main/java/com/androidspace/fusion/ui/common/web/WebFragment.kt"
+            line="19"/>
+    </issue>
+
+    <issue
+        id="RedundantLabel"
+        message="Redundant label can be removed">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="32"/>
+    </issue>
+
+    <issue
+        id="VectorRaster"
+        message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more">
+        <location
+            file="src/main/res/drawable/ic_offline_custom.xml"
+            line="2"/>
+    </issue>
+
+    <issue
+        id="VectorRaster"
+        message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more">
+        <location
+            file="src/main/res/drawable/ic_offline_district.xml"
+            line="2"/>
+    </issue>
+
+    <issue
+        id="VectorRaster"
+        message="Limit vector icons sizes to 200×200 to keep icon drawing fast; see https://developer.android.com/studio/write/vector-asset-studio#when for more">
+        <location
+            file="src/main/res/drawable/ic_offline_region.xml"
+            line="2"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.camera:camera-camera2 than 1.2.0-alpha01 is available: 1.3.0-alpha03">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.camera:camera-core than 1.2.0-alpha01 is available: 1.3.0-alpha03">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.camera:camera-extensions than 1.2.0-alpha01 is available: 1.3.0-alpha03">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.camera:camera-lifecycle than 1.2.0-alpha01 is available: 1.3.0-alpha03">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.camera:camera-video than 1.2.0-alpha01 is available: 1.3.0-alpha03">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.camera:camera-view than 1.2.0-alpha01 is available: 1.3.0-alpha03">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="MergedDataBinderMapper can only be accessed from within the same library (androidx.databinding:databinding-runtime)">
+        <location
+            file="build/generated/source/kapt/debug/androidx/databinding/DataBinderMapperImpl.java"
+            line="3"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="MergedDataBinderMapper.addMapper can only be called from within the same library (androidx.databinding:databinding-runtime)">
+        <location
+            file="build/generated/source/kapt/debug/androidx/databinding/DataBinderMapperImpl.java"
+            line="5"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="DataBinderMapper can only be accessed from within the same library (androidx.databinding:databinding-runtime)">
+        <location
+            file="build/generated/source/kapt/debug/com/androidspace/fusion/DataBinderMapperImpl.java"
+            line="41"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="DataBinderMapper.getLayoutId can only be called from within the same library (androidx.databinding:databinding-runtime)">
+        <location
+            file="build/generated/source/kapt/debug/com/androidspace/fusion/DataBinderMapperImpl.java"
+            line="277"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="DataBinderMapper.convertBrIdToString can only be called from within the same library (androidx.databinding:databinding-runtime)">
+        <location
+            file="build/generated/source/kapt/debug/com/androidspace/fusion/DataBinderMapperImpl.java"
+            line="286"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="DataBinderMapper.collectDependencies can only be called from within the same library (androidx.databinding:databinding-runtime)">
+        <location
+            file="build/generated/source/kapt/debug/com/androidspace/fusion/DataBinderMapperImpl.java"
+            line="292"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/debug/com/androidspace/fusion/databinding/FragmentProfileBindingImpl.java"
+            line="241"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/debug/com/androidspace/fusion/databinding/FragmentProfileBindingImpl.java"
+            line="242"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/debug/com/androidspace/fusion/databinding/FragmentProfileBindingImpl.java"
+            line="243"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/debug/com/androidspace/fusion/databinding/ItemMapBindingImpl.java"
+            line="118"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/debug/com/androidspace/fusion/databinding/ItemRegionBindingImpl.java"
+            line="123"/>
+    </issue>
+
+    <issue
+        id="RestrictedApi"
+        message="TextViewBindingAdapter.setText can only be called from within the same library (androidx.databinding:databinding-adapters)">
+        <location
+            file="build/generated/source/kapt/debug/com/androidspace/fusion/databinding/ItemRegionBindingImpl.java"
+            line="124"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. `R.foo.bar`) than by name (e.g. `getIdentifier(&quot;bar&quot;, &quot;foo&quot;, null)`).">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/Context.kt"
+            line="21"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. `R.foo.bar`) than by name (e.g. `getIdentifier(&quot;bar&quot;, &quot;foo&quot;, null)`).">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/Context.kt"
+            line="68"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/rountedimageview/RoundedImageView.java"
+            line="253"/>
+    </issue>
+
+    <issue
+        id="UseCompatLoadingForDrawables"
+        message="Use `ResourcesCompat.getDrawable()`">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/rountedimageview/RoundedImageView.java"
+            line="291"/>
+    </issue>
+
+    <issue
+        id="SetJavaScriptEnabled"
+        message="Using `setJavaScriptEnabled` can introduce XSS vulnerabilities into your application, review carefully">
+        <location
+            file="src/main/java/com/androidspace/fusion/ui/common/web/WebFragment.kt"
+            line="27"/>
+    </issue>
+
+    <issue
+        id="Recycle"
+        message="This `InputStream` should be freed up after use with `#close()`">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/Uri.kt"
+            line="73"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 26">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/Activity.kt"
+            line="15"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 26">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/Activity.kt"
+            line="26"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 31">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="27"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 26">
+        <location
+            file="src/main/java/com/androidspace/fusion/base/BaseActivity.kt"
+            line="45"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 26">
+        <location
+            file="src/main/java/com/androidspace/fusion/base/BaseActivity.kt"
+            line="61"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 26">
+        <location
+            file="src/main/java/com/androidspace/fusion/base/BaseActivity.kt"
+            line="67"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 30">
+        <location
+            file="src/main/java/com/androidspace/fusion/base/BaseActivity.kt"
+            line="120"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 21">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/Bitmap.kt"
+            line="104"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 21">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/Bitmap.kt"
+            line="104"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 26">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/ContextUtils.kt"
+            line="19"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 26">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/ContextUtils.kt"
+            line="26"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is never &lt; 26">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/Drawable.kt"
+            line="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 26">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/NetworkHelper.kt"
+            line="14"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is never &lt; 26">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/RealPathUtil.java"
+            line="19"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is never &lt; 26">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/RealPathUtil.java"
+            line="23"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 26">
+        <location
+            file="src/main/java/com/androidspace/fusion/utils/RealPathUtil.java"
+            line="78"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 26">
+        <location
+            file="src/main/java/com/androidspace/fusion/services/ZoneService.kt"
+            line="73"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 26">
+        <location
+            file="src/main/java/com/androidspace/fusion/services/ZoneService.kt"
+            line="157"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/camera.xml"
+            line="31"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/camera.xml"
+            line="32"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/camera.xml"
+            line="38"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/camera.xml"
+            line="39"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/camera.xml"
+            line="45"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/camera.xml"
+            line="46"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="This folder configuration (`v24`) is unnecessary; `minSdkVersion` is 26. Merge all the resources in this folder into `drawable`.">
+        <location
+            file="src/main/res/drawable-v24"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="This folder configuration (`v26`) is unnecessary; `minSdkVersion` is 26. Merge all the resources in this folder into `mipmap-anydpi`.">
+        <location
+            file="src/main/res/mipmap-anydpi-v26"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="7"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="8"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="14"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="15"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="21"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="22"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="28"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="29"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="35"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="36"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="42"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="43"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="49"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="50"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="56"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="57"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="63"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="64"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="70"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="71"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="77"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="78"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="84"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="85"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="91"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 28">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="92"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 21">
+        <location
+            file="src/main/res/values/themes.xml"
+            line="10"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 21">
+        <location
+            file="src/main/res/values/themes.xml"
+            line="10"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 21">
+        <location
+            file="src/main/res/values-night/themes.xml"
+            line="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 21">
+        <location
+            file="src/main/res/values-night/themes.xml"
+            line="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 23">
+        <location
+            file="src/main/res/values/themes.xml"
+            line="29"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 23">
+        <location
+            file="src/main/res/values/themes.xml"
+            line="29"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (1211 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="src/main/res/drawable/ic_fhd_off.xml"
+            line="7"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (1211 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="src/main/res/drawable/ic_fhd_on.xml"
+            line="7"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (1101 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="src/main/res/drawable/ic_hd_off.xml"
+            line="7"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (1101 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="src/main/res/drawable/ic_hd_on.xml"
+            line="7"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (1029 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="src/main/res/drawable/ic_offline_custom.xml"
+            line="22"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (1206 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="src/main/res/drawable/ic_offline_custom.xml"
+            line="29"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (1393 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="src/main/res/drawable/ic_offline_custom.xml"
+            line="50"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (1194 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="src/main/res/drawable/ic_offline_custom.xml"
+            line="71"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (870 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="src/main/res/drawable/ic_offline_custom.xml"
+            line="85"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (1518 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="src/main/res/drawable/ic_offline_custom.xml"
+            line="92"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (1973 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="src/main/res/drawable/ic_offline_custom.xml"
+            line="99"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (1108 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="src/main/res/drawable/ic_offline_custom.xml"
+            line="106"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (3027 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="src/main/res/drawable/ic_sd_off.xml"
+            line="7"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (3027 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="src/main/res/drawable/ic_sd_on.xml"
+            line="7"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (1468 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="src/main/res/drawable/ic_service.xml"
+            line="22"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (1816 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="src/main/res/drawable/ic_uhd_off.xml"
+            line="7"/>
+    </issue>
+
+    <issue
+        id="VectorPath"
+        message="Very long vector path (1816 characters), which is bad for performance. Considering reducing precision, removing minor details or rasterizing vector.">
+        <location
+            file="src/main/res/drawable/ic_uhd_on.xml"
+            line="7"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.black_with_corners_left` appears to be unused">
+        <location
+            file="src/main/res/drawable/black_with_corners_left.xml"
+            line="2"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.black_with_corners_right` appears to be unused">
+        <location
+            file="src/main/res/drawable/black_with_corners_right.xml"
+            line="2"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.api_key` appears to be unused">
+        <location
+            file="build.gradle"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.button_white_with_corners` appears to be unused">
+        <location
+            file="src/main/res/drawable/button_white_with_corners.xml"
+            line="2"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.circle_step_active` appears to be unused">
+        <location
+            file="src/main/res/drawable/circle_step_active.xml"
+            line="2"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.circle_step_passive` appears to be unused">
+        <location
+            file="src/main/res/drawable/circle_step_passive.xml"
+            line="2"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.purple_500` appears to be unused">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="4"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.teal_700` appears to be unused">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="7"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.trans` appears to be unused">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="23"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.gray_white` appears to be unused">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="25"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.gray_back` appears to be unused">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="26"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.cursor` appears to be unused">
+        <location
+            file="src/main/res/drawable/cursor.xml"
+            line="2"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.dark` appears to be unused">
+        <location
+            file="src/main/res/drawable/dark.xml"
+            line="2"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.activity_horizontal_margin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="3"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.activity_vertical_margin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="4"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.none` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="6"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.xltiny` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="9"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.xtiny` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="11"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.deka` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.xlmedium` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="16"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.lbig` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="18"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.xllbig` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="20"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.xmbig` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="22"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.xslarge` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="26"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.xlarge` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="27"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.xxxllarge` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="29"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.xxllarge` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="31"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.xxmlarge` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="32"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.xxxslarge` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="33"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.xxxxlslarge` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="35"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.xxxxpllarge` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="36"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.xxxxllarge` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="37"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.xxxxlllarge` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="38"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.xxxxxlarge` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="39"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.xxxxslarge` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="40"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.xxxxxxlarge` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="41"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.xxxxxxllarge` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="42"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.xxxxxxxllarge` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="43"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.xxxxxxxmlarge` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="44"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.xxxxxxxxllarge` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="45"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.bottom_bar_height` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="47"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.logo_width` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="49"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.logo_height` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="50"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.logo_top` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="51"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.frame_top` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="52"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.text_1_top` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="53"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.recivery_top` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="54"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.keyboard_height` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="56"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.button_radius_corner` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="57"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.big_button_margin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="58"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.circle_onboard_left` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="63"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.big_circle_setting_1_width` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="64"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.big_circle_setting_1_height` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="65"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.small_circle_setting_1_width` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="66"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.small_circle_setting_1_height` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="67"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.setting_white_percent` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="68"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.settings_days_bottom` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="69"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.settings_days_count_bottom` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="70"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.cbTop` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="71"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.calendar_number_top` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="73"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.calendar_white_border_height` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="74"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.calendar_logo_width` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="75"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.calendar_logo_height` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="76"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.calendar_logo_top` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="77"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.fab_margin` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="79"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.thumb_size` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="80"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.close_app_height_padding` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="82"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.close_app_width_padding` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="83"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.feedback_height` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="85"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.feedback_top` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="86"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.closed_feeedback_button_top` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="88"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.closed_feeedback_edit_bottom` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="89"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.media_size` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="91"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.top_skip` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="93"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.contact_data_percent` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="94"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.contact_data_bottom_percent` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="95"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.contact_data_action_height` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="96"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.view_contact_height` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="98"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.add_top` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="99"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.dimen.add_bottom` appears to be unused">
+        <location
+            file="src/main/res/values/dimens.xml"
+            line="100"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_filter_list` appears to be unused">
+        <location
+            file="src/main/res/drawable/ic_filter_list.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_my_location` appears to be unused">
+        <location
+            file="src/main/res/drawable/ic_my_location.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_offline` appears to be unused">
+        <location
+            file="src/main/res/drawable/ic_offline.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_offline_custom` appears to be unused">
+        <location
+            file="src/main/res/drawable/ic_offline_custom.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_offline_district` appears to be unused">
+        <location
+            file="src/main/res/drawable/ic_offline_district.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_offline_region` appears to be unused">
+        <location
+            file="src/main/res/drawable/ic_offline_region.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_road_edit` appears to be unused">
+        <location
+            file="src/main/res/drawable/ic_road_edit.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_route` appears to be unused">
+        <location
+            file="src/main/res/drawable/ic_route.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_search` appears to be unused">
+        <location
+            file="src/main/res/drawable/ic_search.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.regions` appears to be unused">
+        <location
+            file="src/main/res/values/json.xml"
+            line="3"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.oauth_redirect_host` appears to be unused">
+        <location
+            file="src/main/res/values/oauth.xml"
+            line="3"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.oauth_redirect_uri` appears to be unused">
+        <location
+            file="src/main/res/values/oauth.xml"
+            line="4"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.title_roads` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="4"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.title_tile_map` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="6"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.search` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="17"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.create` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="18"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.add_map` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="19"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.map_name` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="20"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.cancel` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="21"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.title_offline_region` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="23"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.title_offline_district` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="24"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.title_offline_custom` appears to be unused">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="25"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.switch_off` appears to be unused">
+        <location
+            file="src/main/res/drawable/switch_off.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.switch_on` appears to be unused">
+        <location
+            file="src/main/res/drawable/switch_on.xml"
+            line="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.BoldTextStyle` appears to be unused">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="17"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.OnboardTextStyle` appears to be unused">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="24"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.AuthTextStyle` appears to be unused">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="38"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.ButtonBoldTextStyle` appears to be unused">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="52"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.ButtonBigTextStyle` appears to be unused">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="59"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.RequestTextStyle` appears to be unused">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="66"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.RequestSmallTextStyle` appears to be unused">
+        <location
+            file="src/main/res/values/text_styles.xml"
+            line="73"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.Theme_Mines_Main` appears to be unused">
+        <location
+            file="src/main/res/values/themes.xml"
+            line="27"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.Theme_Mines_AppBarOverlay` appears to be unused">
+        <location
+            file="src/main/res/values/themes.xml"
+            line="32"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.Theme_Mines_PopupOverlay` appears to be unused">
+        <location
+            file="src/main/res/values/themes.xml"
+            line="34"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.Theme_Fusion_NoActionBar_NoActionBar` appears to be unused">
+        <location
+            file="src/main/res/values/themes.xml"
+            line="36"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.Theme_Mines_NoActionBar_AppBarOverlay` appears to be unused">
+        <location
+            file="src/main/res/values/themes.xml"
+            line="41"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.Theme_Mines_NoActionBar_PopupOverlay` appears to be unused">
+        <location
+            file="src/main/res/values/themes.xml"
+            line="43"/>
+    </issue>
+
+    <issue
+        id="MonochromeLauncherIcon"
+        message="The application adaptive icon is missing a monochrome tag">
+        <location
+            file="src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+            line="2"/>
+    </issue>
+
+    <issue
+        id="MonochromeLauncherIcon"
+        message="The application adaptive roundIcon is missing a monochrome tag">
+        <location
+            file="src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+            line="2"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image">
+        <location
+            file="src/main/res/layout/fragment_crop.xml"
+            line="39"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Додати&quot;, should use `@string` resource">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="169"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;UHD&quot;, should use `@string` resource">
+        <location
+            file="src/main/res/layout/quality_selector.xml"
+            line="19"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;FHD&quot;, should use `@string` resource">
+        <location
+            file="src/main/res/layout/quality_selector.xml"
+            line="44"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;HD&quot;, should use `@string` resource">
+        <location
+            file="src/main/res/layout/quality_selector.xml"
+            line="68"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;SD&quot;, should use `@string` resource">
+        <location
+            file="src/main/res/layout/quality_selector.xml"
+            line="92"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_alpha_photo.xml"
+            line="27"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_alpha_photo.xml"
+            line="27"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_alpha_video.xml"
+            line="27"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_alpha_video.xml"
+            line="27"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/xmedium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_crop.xml"
+            line="41"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/xmedium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_crop.xml"
+            line="41"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/tiny&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_gallery.xml"
+            line="38"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/tiny&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_gallery.xml"
+            line="38"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_gallery.xml"
+            line="49"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_gallery.xml"
+            line="49"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/xlbig&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_photo.xml"
+            line="39"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/xlbig&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_photo.xml"
+            line="39"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/xlbig&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_photo.xml"
+            line="61"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/xlbig&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_photo.xml"
+            line="61"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="38"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="38"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="49"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="49"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/small&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="106"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/small&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="106"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/small&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="136"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/small&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="136"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/small&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="167"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/small&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="167"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/small&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="181"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/small&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="181"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="205"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="205"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="217"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="217"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="280"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="280"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="291"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="291"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="300"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="300"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="322"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="322"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="333"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="333"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="342"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="342"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="366"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="366"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="377"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="377"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="386"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="386"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="409"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="409"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="420"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="420"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="429"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="429"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="452"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="452"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="463"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="463"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="472"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_profile.xml"
+            line="472"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_show_photo.xml"
+            line="32"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_show_photo.xml"
+            line="32"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_show_video.xml"
+            line="32"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_show_video.xml"
+            line="32"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/xlbig&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_video.xml"
+            line="38"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/xlbig&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_video.xml"
+            line="38"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/xlbig&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_video.xml"
+            line="60"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/xlbig&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/fragment_video.xml"
+            line="60"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/small&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/gallery_item_add.xml"
+            line="32"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/small&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/gallery_item_add.xml"
+            line="32"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/xsmall&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/gallery_item_image.xml"
+            line="33"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/xsmall&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/gallery_item_image.xml"
+            line="33"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/xsmall&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/gallery_item_video.xml"
+            line="55"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/xsmall&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/gallery_item_video.xml"
+            line="55"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/item_map.xml"
+            line="17"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/item_map.xml"
+            line="17"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/xsmall&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/item_map.xml"
+            line="37"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/xsmall&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/item_map.xml"
+            line="37"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/item_region.xml"
+            line="17"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/item_region.xml"
+            line="17"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/xsmall&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/item_region.xml"
+            line="46"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/xsmall&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/item_region.xml"
+            line="46"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/item_region.xml"
+            line="57"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/item_region.xml"
+            line="57"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/item_region.xml"
+            line="69"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginRight` with `android:layout_marginEnd=&quot;@dimen/medium&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/item_region.xml"
+            line="69"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/small&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/quality_selector.xml"
+            line="26"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/small&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/quality_selector.xml"
+            line="26"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/small&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/quality_selector.xml"
+            line="51"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/small&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/quality_selector.xml"
+            line="51"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/small&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/quality_selector.xml"
+            line="75"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/small&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/quality_selector.xml"
+            line="75"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/small&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/quality_selector.xml"
+            line="99"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:layout_marginLeft` with `android:layout_marginStart=&quot;@dimen/small&quot;` to better support right-to-left layouts">
+        <location
+            file="src/main/res/layout/quality_selector.xml"
+            line="99"/>
+    </issue>
+
+    <issue
+        id="NullSafeMutableLiveData"
+        message="Cannot set non-nullable LiveData value to `null`">
+        <location
+            file="src/main/java/com/androidspace/fusion/base/BaseViewModel.kt"
+            line="40"/>
+    </issue>
+
+</issues>

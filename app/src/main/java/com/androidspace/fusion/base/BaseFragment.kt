@@ -130,4 +130,8 @@ open class BaseFragment<DB : ViewDataBinding, VM : BaseViewModel<*>> : Fragment(
     override fun onMessage(textID: Int) {
         Toast.makeText(requireContext(), textID, Toast.LENGTH_LONG).show()
     }
+
+    override fun onMessage(text: String) {
+        Toast.makeText(requireContext(), text, Toast.LENGTH_LONG).show()
+    }
 }

@@ -4,8 +4,8 @@ import com.androidspace.fusion.MainActViewModel
 import com.androidspace.fusion.common.camera.CameraViewModel
 import com.androidspace.fusion.ui.common.camera.*
 import com.androidspace.fusion.ui.common.license.PDFFragment
-import com.androidspace.fusion.ui.navigation.NavigationFragment
-import com.androidspace.fusion.ui.navigation.NavigationViewModel
+import com.androidspace.fusion.ui.maps.MapFragment
+import com.androidspace.fusion.ui.maps.MapViewModel
 import com.androidspace.fusion.ui.profile.*
 import com.androidspace.fusion.ui.splash.SplashViewModel
 import com.infotech.mines.ui.common.license.PDFViewModel
@@ -79,10 +79,10 @@ val mainModule = module {
         PDFViewModel(get())
     }
     fragment {
-        NavigationFragment()
+        MapFragment()
     }
     viewModel {
-        NavigationViewModel(get())
+        MapViewModel(get())
     }
     fragment {
         ProfileFragment()

@@ -26,6 +26,8 @@ android {
             buildConfigField 'String', 'BASE_URL', project.property('BASE_URL')
             buildConfigField 'String', 'PORTAL_URL', project.property('PORTAL_URL')
             resValue "string", "api_key", project.property('API_KEY')
+            resValue "string", "license", project.property("LICENSE")
+            buildConfigField "String", 'DONOR_MAP_ID', project.property('DONOR_MAP_ID')
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
@@ -34,6 +36,8 @@ android {
             buildConfigField 'String', 'BASE_URL', project.property('BASE_URL')
             buildConfigField 'String', 'PORTAL_URL', project.property('PORTAL_URL')
             resValue "string", "api_key", project.property('API_KEY')
+            resValue "string", "license", project.property("LICENSE")
+            buildConfigField "String", 'DONOR_MAP_ID', project.property('DONOR_MAP_ID')
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
