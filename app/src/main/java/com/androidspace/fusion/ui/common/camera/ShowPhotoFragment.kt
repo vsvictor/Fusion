@@ -17,8 +17,8 @@ class ShowPhotoFragment : BaseFragment<FragmentShowPhotoBinding, ShowPhotoViewMo
         requireActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
         onActionBarState?.onActionBarView(true)
     }
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onInit() {
+        super.onInit()
         binding.model = viewModel
         arguments?.let {
             viewModel.backID = it.getInt("back", -1)

@@ -1,6 +1,7 @@
 package com.androidspace.fusion.ui.common
 
-import com.esri.arcgisruntime.geometry.Point
+import com.arcgismaps.geometry.Point
+
 
 interface OnMapPoint {
     fun onMapPoint(point: Point)

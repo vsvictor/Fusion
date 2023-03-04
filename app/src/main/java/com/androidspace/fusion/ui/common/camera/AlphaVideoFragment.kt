@@ -27,8 +27,8 @@ class AlphaVideoFragment : BaseFragment<FragmentAlphaVideoBinding, ShowVideoView
             requireActivity().onBackPressed()
         }
     }
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onInit() {
+        super.onInit()
         binding.model = viewModel
         arguments?.let {
             viewModel.backID = it.getInt("back", -1)

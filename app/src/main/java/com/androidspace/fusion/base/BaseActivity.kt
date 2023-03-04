@@ -54,20 +54,19 @@ abstract class BaseActivity<DB : ViewDataBinding, VM : BaseViewModel<*>> : AppCo
         val sh by KoinJavaComponent.inject(SettingsSharedPreferences::class.java)
         val config = resources.configuration
         val currLoc = Locale.forLanguageTag("uk")
-        val lang = sh.prefs.getString("language", currLoc.language) // your language code
-        val locale = Locale(lang)
-        Locale.setDefault(locale)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1)
-            config.setLocale(locale)
-        else
-            config.locale = locale
+        val lang = sh.prefs.getString("language", currLoc.language)
+        lang?.let {
+            val locale = Locale(it)
+            Locale.setDefault(locale)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1)
+                config.setLocale(locale)
+            else
+                config.locale = locale
+        }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
             createConfigurationContext(config)
         resources.updateConfiguration(config, resources.displayMetrics)
-
-
-
         val metrics = DisplayMetrics()
         windowManager.defaultDisplay.getMetrics(metrics)
         var text = "N/A"

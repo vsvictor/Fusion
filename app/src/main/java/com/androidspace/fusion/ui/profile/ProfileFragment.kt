@@ -16,8 +16,8 @@ import com.androidspace.fusion.ui.profile.data.OnProfile
 
 @Layout(R.layout.fragment_profile)
 class ProfileFragment : BaseFragment<FragmentProfileBinding, ProfileViewModel>(), OnProfile {
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onInit() {
+        super.onInit()
         viewModel.onProfile = this
         binding.model = viewModel
         viewModel.checkLogin()

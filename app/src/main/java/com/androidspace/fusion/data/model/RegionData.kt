@@ -2,7 +2,7 @@ package com.androidspace.fusion.data.model
 
 import android.os.Parcel
 import android.os.Parcelable
-import com.esri.arcgisruntime.geometry.Geometry
+import com.arcgismaps.geometry.Geometry
 import com.google.gson.annotations.SerializedName
 
 data class RegionData(
@@ -27,7 +27,7 @@ data class RegionData(
         parcel.readDouble(),
         parcel.readString(),
         parcel.readString()?:"",
-        Geometry.fromJson(parcel.readString()),
+        Geometry.fromJson(parcel.readString()?:""),
         parcel.readByte() != 0.toByte()
     ) {
     }

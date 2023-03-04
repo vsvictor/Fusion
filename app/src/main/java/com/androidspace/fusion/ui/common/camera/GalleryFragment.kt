@@ -23,7 +23,6 @@ import permissions.dispatcher.RuntimePermissions
 class GalleryFragment : BaseFragment<FragmentGalleryBinding, GalleryViewModel>(), OnFragmentChange,
     OnLoaderShow, OnCamera, OnBack, OnProgress {
     private var previewFragment: Fragment? = null
-    private var camera: CameraFragment? = null
     private var onBottomBarVisible: OnBottomBarVisible? = null
     var isAdd = false
     companion object{
@@ -42,8 +41,8 @@ class GalleryFragment : BaseFragment<FragmentGalleryBinding, GalleryViewModel>()
         onBottomBarVisible?.onBottomBarVisible(false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onInit() {
+        super.onInit()
         binding.model = viewModel
         viewModel.args = arguments
         viewModel.setOnFragmentCloseListener(this)
@@ -78,6 +77,7 @@ class GalleryFragment : BaseFragment<FragmentGalleryBinding, GalleryViewModel>()
         onBottomBarVisible = null
         super.onDetach()
     }
+    @Deprecated("Deprecated in Java")
     @SuppressLint("NeedOnRequestPermissionsResult")
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)

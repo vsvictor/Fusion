@@ -12,10 +12,9 @@ import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import com.androidspace.fusion.MainActivity
 import com.androidspace.fusion.R
-import com.esri.arcgisruntime.data.FeatureTable
-import com.esri.arcgisruntime.data.ServiceFeatureTable
-import com.esri.arcgisruntime.geotriggers.*
-import com.esri.arcgisruntime.location.LocationDataSource
+import com.arcgismaps.data.FeatureTable
+import com.arcgismaps.data.ServiceFeatureTable
+import com.arcgismaps.geotriggers.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import java.util.*
@@ -83,7 +82,7 @@ class ZoneService: Service() {
             //featureRequestMode = ServiceFeatureTable.FeatureRequestMode.ON_INTERACTION_NO_CACHE
         }
 
-        Log.d(TAG, "Location status: "+feed?.locationDataSource?.status?.name)
+/*        Log.d(TAG, "Location status: "+feed?.locationDataSource?.status?.name)
         feed?.locationDataSource?.addStatusChangedListener {
             Log.d(TAG, "Location source: "+ it.status.name)
             if(it.status == LocationDataSource.Status.STARTED){
@@ -102,7 +101,7 @@ class ZoneService: Service() {
         }
         tab.addLoadStatusChangedListener {
             Log.d(TAG, "Table:"+it.newLoadStatus.name+", Mode:"+tab.featureRequestMode.name)
-        }
+        }*/
         startMonitor(tab!!)
         startTimer()
     }
@@ -118,9 +117,9 @@ class ZoneService: Service() {
     }
     private fun startMonitor(table: FeatureTable){
         val fence = FeatureFenceParameters(table)
-        val trigger = FenceGeotrigger(feed, FenceRuleType.ENTER_OR_EXIT, fence)
+        val trigger = FenceGeotrigger((feed as GeotriggerFeed), FenceRuleType.EnterOrExit, fence)
         monitor = GeotriggerMonitor(trigger)
-        monitor?.addGeotriggerMonitorWarningChangedEventListener {
+/*        monitor?.addGeotriggerMonitorWarningChangedEventListener {
             Log.d(TAG, "Warning: "+it.warning.message)
             it.warning.printStackTrace()
         }
@@ -135,16 +134,16 @@ class ZoneService: Service() {
             monitor?.startAsync()
         }else if(feed?.locationDataSource?.status == LocationDataSource.Status.STOPPED){
             feed?.locationDataSource?.startAsync()
-        }
+        }*/
 
     }
     private fun handleGeotriggerNotification(geotriggerNotificationInfo: GeotriggerNotificationInfo) {
         val fenceGeotriggerNotificationInfo = geotriggerNotificationInfo as FenceGeotriggerNotificationInfo
         val fenceFeatureName = fenceGeotriggerNotificationInfo.message
-        if (fenceGeotriggerNotificationInfo.fenceNotificationType == FenceNotificationType.ENTERED) {
+        if (fenceGeotriggerNotificationInfo.fenceNotificationType == FenceNotificationType.Entered) {
             Log.d(TAG, "-----------------> Entered")
             counter ++
-        } else if (fenceGeotriggerNotificationInfo.fenceNotificationType == FenceNotificationType.EXITED) {
+        } else if (fenceGeotriggerNotificationInfo.fenceNotificationType == FenceNotificationType.Exited) {
             Log.d(TAG, "Exited ----------------->")
             counter--
         }

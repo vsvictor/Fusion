@@ -7,10 +7,8 @@
 
     <fragment
         android:id="@+id/navigation_navigation"
-        android:name="com.androidspace.fusion.ui.navigation.NavigationFragment"
-        android:label="@string/title_navigation"
-        tools:layout="@layout/fragment_navigation" />
-
+        android:name="com.androidspace.fusion.ui.maps.MapFragment"
+        android:label="NavigationFragment" />
 
     <fragment
         android:id="@+id/navigation_profile"

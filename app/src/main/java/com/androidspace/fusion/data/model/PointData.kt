@@ -2,7 +2,7 @@ package com.androidspace.fusion.data.model
 
 import android.os.Parcel
 import android.os.Parcelable
-import com.esri.arcgisruntime.geometry.Point
+import com.arcgismaps.geometry.Point
 
 data class PointData(val latitude: Double, val longitude: Double) : Parcelable {
     constructor(parcel: Parcel) : this(

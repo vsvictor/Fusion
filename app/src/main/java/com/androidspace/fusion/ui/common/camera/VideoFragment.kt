@@ -72,8 +72,6 @@ class VideoFragment : BaseFragment<FragmentVideoBinding, VideoViewModel>(), OnVi
                     CameraSelector.DEFAULT_FRONT_CAMERA
                 )) {
                     try {
-                        // just get the camera.cameraInfo to query capabilities
-                        // we are not binding anything here.
                         if (provider.hasCamera(camSelector)) {
                             val camera = provider.bindToLifecycle(requireActivity(), camSelector)
                             QualitySelector.getSupportedQualities(camera.cameraInfo).filter { quality ->
@@ -96,8 +94,8 @@ class VideoFragment : BaseFragment<FragmentVideoBinding, VideoViewModel>(), OnVi
         binding.clPanel.layoutParams = param*/
         checkCameraWithPermissionCheck()
     }
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onInit() {
+        super.onInit()
         viewModel.onVideoEvents = this
         viewModel.onVideoUI = this
         viewModel.setOnDestinatationListener(dest)
@@ -112,6 +110,7 @@ class VideoFragment : BaseFragment<FragmentVideoBinding, VideoViewModel>(), OnVi
         provider.unbindAll()
         Log.d(TAG, "Camera stopped")
     }
+    @Deprecated("Deprecated in Java")
     @SuppressLint("NeedOnRequestPermissionsResult")
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
