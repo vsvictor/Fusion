@@ -16,5 +16,10 @@
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
 
+    <fragment
+        android:id="@+id/navigation_rfid"
+        android:name="com.androidspace.fusion.ui.reader.RFIDFragment"
+        android:label="@string/title_rfid"
+        tools:layout="@layout/fragment_profile" />
 
 </navigation>

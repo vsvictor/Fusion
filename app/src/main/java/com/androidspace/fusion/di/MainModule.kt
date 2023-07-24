@@ -7,6 +7,8 @@ import com.androidspace.fusion.ui.common.license.PDFFragment
 import com.androidspace.fusion.ui.maps.MapFragment
 import com.androidspace.fusion.ui.maps.MapViewModel
 import com.androidspace.fusion.ui.profile.*
+import com.androidspace.fusion.ui.reader.RFIDFragment
+import com.androidspace.fusion.ui.reader.RFIDViewModel
 import com.androidspace.fusion.ui.splash.SplashViewModel
 import com.infotech.mines.ui.common.license.PDFViewModel
 import com.infotech.mines.ui.splash.SplashFragment
@@ -89,6 +91,12 @@ val mainModule = module {
     }
     viewModel {
         ProfileViewModel(get(), get())
+    }
+    fragment {
+        RFIDFragment()
+    }
+    viewModel {
+        RFIDViewModel(get())
     }
 }
 

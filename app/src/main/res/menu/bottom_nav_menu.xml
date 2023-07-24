@@ -12,5 +12,9 @@
         android:icon="@drawable/ic_profile"
         android:title="@string/title_profile" />
 
+    <item
+        android:id="@+id/navigation_rfid"
+        android:icon="@drawable/ic_rfid"
+        android:title="@string/title_rfid" />
 
 </menu>
